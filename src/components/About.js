@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       className="relative h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('/background.jpg')" }}
+      style={{ backgroundImage: "url('background.jpg')" }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-center items-center text-center p-6">
         <div className="bg-gray-300 rounded bg-opacity-75 p-6">
