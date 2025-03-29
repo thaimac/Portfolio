@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
+    <section id="footer">
     <footer className="bg-gray-200 p-4 text-black text-center">
       <p>
         <a href="mailto:tmcewen4@.com" className="inline-block mx-2">
@@ -17,6 +18,7 @@ const Footer = () => {
         </a>
       </p>
     </footer>
+    </section>
   );
 };
 

@@ -1,19 +1,49 @@
 // About.js
 import React from "react";
+import { motion } from "framer-motion";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section id="about" className="bg-gray-100 h-screen flex flex-col justify-center items-center">
-      <div className="bg-white p-4 rounded-lg shadow-md">
-      <h2 className="text-3xl font-bold text-center">About Me</h2>
-      <div className="max-w-lg mx-auto mt-4 text-center">
-        <img src="avatar.jpg" alt="Tyler McEwen" className="rounded-full h-24 w-24 flex items-center justify-center mx-auto" />
-        <p className="mt-4">
-        Hello! My name is Tyler and I am a data science engineer with a passion for building cool things that make an impact
-        on the lives of others. My professional experience has largely centered around deploying and supporting cloud infrastructure, while my
-        personal projects have always sat between two of my greatest interests - software and finance.
-        </p>
-      </div>
+    <section
+      className="relative h-screen bg-cover bg-center"
+      style={{ backgroundImage: "url('/background.jpg')" }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-center items-center text-center p-6">
+        <div className="bg-gray-300 rounded bg-opacity-75 p-6">
+        <motion.h1
+          className="text-5xl md:text-6xl font-bold text-black mb-4"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          I'm Tyler McEwen.
+        </motion.h1>
+        <motion.p
+          className="text-lg md:text-xl text-black mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          Data Science Engineer | Software & Finance Enthusiast
+        </motion.p>
+        <motion.div
+          className="flex space-x-6 justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+          <a href="mailto:tmcewen4@.com" className="text-black hover:text-gray-300">
+            <FaEnvelope className="w-6 h-6 transition-colors duration-200" />
+          </a>
+          <a href="https://github.com/thaimac" className="text-black hover:text-gray-300">
+            <FaGithub className="w-6 h-6 transition-colors duration-200" />
+          </a>
+          <a href="https://www.linkedin.com/in/tyler-mcewen/" className="text-black hover:text-gray-300">
+            <FaLinkedin className="w-6 h-6 transition-colors duration-200" />
+          </a>
+        </motion.div>
+        </div>
       </div>
     </section>
   );
